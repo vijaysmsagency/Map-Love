@@ -12,7 +12,7 @@ GEMINI_API_KEY = os.getenv("AIzaSyCbPKYUEloVwvDSazTBhQEVO4BDvjb6Sm4")
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash') # या gemini-1.5-pro का उपयोग करें
 
-bot = telebot.TeleBot(TELEGRAM_TOKEN)
+bot = telebot.TeleBot(TOKEN, threaded=False)
 
 @bot.message_handler(content_types=['photo'])
 def handle_photo(message):
