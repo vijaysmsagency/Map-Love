@@ -5,8 +5,8 @@ from PIL import Image
 import io
 
 # API Keys (Railway Environment Variables से आएंगी)
-TELEGRAM_TOKEN = os.getenv("8095048825:AAEEoiluSycrAg-GTuzDMq2m7r3MhXihd9I")
-GEMINI_API_KEY = os.getenv("AIzaSyA9OHh36vyIpTrawumw3xv3DI1obt1WXy8")
+TELEGRAM_TOKEN = os.environ("8095048825:AAEEoiluSycrAg-GTuzDMq2m7r3MhXihd9I")
+GEMINI_API_KEY = os.environ("AIzaSyA9OHh36vyIpTrawumw3xv3DI1obt1WXy8")
 
 # Gemini Setup
 genai.configure(api_key=GEMINI_API_KEY)
